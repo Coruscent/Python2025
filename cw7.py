@@ -249,7 +249,7 @@ class DNAseq:
         return DNAseq(self.name + "_extended", self.seq + x.upper())
 seq = "ATGAAGATATTGGACTATATTCCGGGAAATGCTTTTATGTATCTGA"
 
-# Clean the sequence to contain only standard DNA bases (A, T, G, C)
+# Oczyszczanie sekwencji od innych znaków, pozostawianie tylko A, T, G, C
 cleaned_seq = "".join([base for base in seq.upper() if base in ['A', 'T', 'G', 'C']])
 
 dna_object = DNAseq("MySequence", cleaned_seq)
@@ -260,3 +260,4 @@ print(dna_object.sklad())
 print(dna_object.__repr__())
 
 print(f"Aminokwasy {dna_object.translacja()}")
+
